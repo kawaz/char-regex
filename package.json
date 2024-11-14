@@ -1,0 +1,35 @@
+{
+  "name": "@kawaz/char-regex",
+  "description": "a compact version of the 'char-regex' package",
+  "version": "0.0.1",
+  "author": "kawaz",
+  "license": "MIT",
+  "type": "module",
+  "module": "src/index.ts",
+  "main": "dist/index.js",
+  "types": "src/index.d.ts",
+  "files": ["dist", "src/index.d.ts", "!**/*.test.*", "!**/*.spec.*"],
+  "keywords": ["unicode", "regex", "character", "emoji"],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kawaz/char-regex.git"
+  },
+  "homepage": "https://github.com/kawaz/char-regex#readme",
+  "bugs": {
+    "url": "https://github.com/kawaz/char-regex/issues"
+  },
+  "scripts": {
+    "build": "bun build src/index.ts --outdir dist --minify",
+    "test": "bun run build && bun test"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "char-regex": "^2.0.1"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
